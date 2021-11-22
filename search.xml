@@ -27,6 +27,33 @@
     </entry>
     
     
+    
+    <entry>
+      <title>如何建立github个人博客</title>
+      <link href="/2021/11/21/how-to-build-blog/"/>
+      <url>/2021/11/21/how-to-build-blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-选择博客"><a href="#1-选择博客" class="headerlink" title="1.选择博客"></a>1.选择博客</h1><p>目前比较流行的博客有：</p><ol><li><a href="https://hexo.io/">Hexo</a><h1 id="2-选择博客主题"><a href="#2-选择博客主题" class="headerlink" title="2.选择博客主题"></a>2.选择博客主题</h1>目前比较流行的Hexo主题有：</li><li><a href="https://gitee.com/ElliottZhang/hexo-theme-Claudia?_from=gitee_search">hexo-theme-Claudia</a><h1 id="3-安装博客并发布"><a href="#3-安装博客并发布" class="headerlink" title="3.安装博客并发布"></a>3.安装博客并发布</h1>参见 <a href="https://www.jianshu.com/p/390f202c5b0e">5分钟搞定个人博客-hexo</a><h1 id="4-个性化博客设置与文章发布"><a href="#4-个性化博客设置与文章发布" class="headerlink" title="4.个性化博客设置与文章发布"></a>4.个性化博客设置与文章发布</h1>参见</li><li><a href="https://gitee.com/ElliottZhang/hexo-theme-Claudia?_from=gitee_search">hexo-theme-Claudia主题设置</a></li><li><a href="https://www.jianshu.com/p/cd623d82c00a">Hexo博客新建文章并发布</a></li><li><a href="https://hexo.io/docs/writing.html">Hexo官方博客</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> hexo-theme-Claudia </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
