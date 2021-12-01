@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-23T14:04:50.166Z</updated>
+  <updated>2021-12-01T14:03:16.994Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Springboot AlibabaCloud OAuth2 Demo使用说明</title>
+    <link href="http://example.com/2021/12/01/alibaba-cloud-oauth2-demo-quick-start/"/>
+    <id>http://example.com/2021/12/01/alibaba-cloud-oauth2-demo-quick-start/</id>
+    <published>2021-12-01T14:03:00.000Z</published>
+    <updated>2021-12-01T14:03:16.994Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Springboot-AlibabaCloud-OAuth2-Demo使用说明"><a href="#Springboot-AlibabaCloud-OAuth2-Demo使用说明" class="headerlink" title="Springboot AlibabaCloud OAuth2 Demo使用说明"></a>Springboot AlibabaCloud OAuth2 Demo使用说明</h3><blockquote><p><a href="https://github.com/mauersu/springboot-demo">springboot-alibabacloud-oauth2-demo源码地址</a>  其中springboot-oauth2-demo模块</p></blockquote><ol><li>下载并启动nacos<a href="https://nacos.io/zh-cn/docs/quick-start.html">官网快速开始</a></li><li>启动nacos后，导入项目document文件夹下nacos_config_export.zip文件</li><li>导入mysql数据库test初始化脚本，在document文件夹下的sql文件夹oauth_demo.sql文件</li><li>安装redis-server并启动</li><li>导入项目下document文件夹下oauth2-server.postman_collection.json文件到<a href="https://www.postman.com/">Http请求工具Postman</a></li><li>启动oauth2-server项目</li><li>访问Postman中auth-server:密码模式获取令牌接口，如果返回</li></ol><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2MzgzNzM4NzAsImF1dGhvcml0aWVzIjpbImRlbW86dGVzdCJdLCJqdGkiOiJkNDc3YzI1NS02MGQ2LTQ0NDUtOThlMC05OGJmNzBlYzBlYWMiLCJjbGllbnRfaWQiOiJ0ZXN0IiwidXNlcm5hbWUiOiJhZG1pbiJ9.VcppGmpAMQPSwrtvEinSnEF5P_yti-fJVijg0-6gyAg",</span><br><span class="line">    "token_type": "bearer",</span><br><span class="line">    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbImFsbCJdLCJhdGkiOiJkNDc3YzI1NS02MGQ2LTQ0NDUtOThlMC05OGJmNzBlYzBlYWMiLCJleHAiOjE2Mzg0NTMwNzAsImF1dGhvcml0aWVzIjpbImRlbW86dGVzdCJdLCJqdGkiOiJiM2MxYzU1MS0wOWYxLTQ1ZTItYThjZi00MmU2YjQ5Y2E4ZWEiLCJjbGllbnRfaWQiOiJ0ZXN0IiwidXNlcm5hbWUiOiJhZG1pbiJ9.MhsgG-qwmsAdaFa5qH-jDrTwa0ZL4t6IkK9-5On0yZU",</span><br><span class="line">    "expires_in": 7199,</span><br><span class="line">    "scope": "all",</span><br><span class="line">    "username": "admin",</span><br><span class="line">    "jti": "d477c255-60d6-4445-98e0-98bf70ec0eac"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>则证明项目连接数据库以及oauth2密码模式登录成功。<br>8. 访问Postman中auth-server:provider接口，并设置Headers中Authorization参数为最新accesstoken，如果返回</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明项目连接nacos配置中心成功。<br>9. 启动oauth2-resource项目<br>10. 访问Postman中resource:testfeign接口，并设置Headers中Authorization参数为最新accesstoken，如果返回</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明资源服务器feign调用oauth-server成功。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Springboot-AlibabaCloud-OAuth2-Demo使用说明&quot;&gt;&lt;a href=&quot;#Springboot-AlibabaCloud-OAuth2-Demo使用说明&quot; class=&quot;headerlink&quot; title=&quot;Springboot Ali</summary>
+      
+    
+    
+    
+    <category term="springcloud" scheme="http://example.com/categories/springcloud/"/>
+    
+    <category term="quickstart" scheme="http://example.com/categories/quickstart/"/>
+    
+    <category term="alibaba-cloud" scheme="http://example.com/categories/alibaba-cloud/"/>
+    
+    <category term="oauth2" scheme="http://example.com/categories/oauth2/"/>
+    
+    
+    <category term="alibaba-cloud" scheme="http://example.com/tags/alibaba-cloud/"/>
+    
+    <category term="nacos" scheme="http://example.com/tags/nacos/"/>
+    
+    <category term="feign" scheme="http://example.com/tags/feign/"/>
+    
+    <category term="restTemplate" scheme="http://example.com/tags/restTemplate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Springboot AlibabaCloud Demo使用说明</title>
+    <link href="http://example.com/2021/11/27/alibaba-cloud-demo-quick-start/"/>
+    <id>http://example.com/2021/11/27/alibaba-cloud-demo-quick-start/</id>
+    <published>2021-11-27T13:22:00.000Z</published>
+    <updated>2021-12-01T13:34:15.656Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Springboot-AlibabaCloud-Demo使用说明"><a href="#Springboot-AlibabaCloud-Demo使用说明" class="headerlink" title="Springboot AlibabaCloud Demo使用说明"></a>Springboot AlibabaCloud Demo使用说明</h3><blockquote><p><a href="https://github.com/mauersu/springboot-demo">springboot-alibabacloud-demo源码地址</a>  其中springboot-alibabacloud-demo模块</p></blockquote><ol><li>下载并启动nacos<a href="https://nacos.io/zh-cn/docs/quick-start.html">官网快速开始</a></li><li>启动nacos后，导入项目document文件夹下nacos_config_export.zip文件</li><li>导入mysql数据库test初始化脚本，在document文件夹下的sql文件夹init.sql文件</li><li>启动provider-demo项目</li><li>访问’<a href="http://localhost:8081/test/1'%EF%BC%8C%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E">http://localhost:8081/test/1'，如果返回</a></li></ol><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{"id":"1","username":"11","password":"111"}</span><br></pre></td></tr></tbody></table></figure><p>则证明项目连接数据库成功。<br>6. 访问’<a href="http://localhost:8081/provider',%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E">http://localhost:8081/provider',如果返回</a></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明项目连接nacos配置中心成功。<br>7. 启动consumer-demo项目<br>8. 访问’<a href="http://localhost:8082/provider/name',%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E">http://localhost:8082/provider/name',如果返回</a></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明项目连接nacos配置中心成功。<br>9. 访问’<a href="http://localhost:8082/consumer',%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E">http://localhost:8082/consumer',如果返回</a></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name:alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明项目使用feign访问provider-demo成功。<br>10. 访问’<a href="http://localhost:8082/consumer1',%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E">http://localhost:8082/consumer1',如果返回</a></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明项目使用RestTemplate访问provider-demo成功。<br>11. 访问’<a href="http://localhost:8082/consumer2',%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E">http://localhost:8082/consumer2',如果返回</a></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alibabacloud-demo-name</span><br></pre></td></tr></tbody></table></figure><p>则证明项目使用RestTemplate访问provider-demo成功。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Springboot-AlibabaCloud-Demo使用说明&quot;&gt;&lt;a href=&quot;#Springboot-AlibabaCloud-Demo使用说明&quot; class=&quot;headerlink&quot; title=&quot;Springboot AlibabaCloud Demo</summary>
+      
+    
+    
+    
+    <category term="springcloud" scheme="http://example.com/categories/springcloud/"/>
+    
+    <category term="quickstart" scheme="http://example.com/categories/quickstart/"/>
+    
+    <category term="alibaba-cloud" scheme="http://example.com/categories/alibaba-cloud/"/>
+    
+    
+    <category term="alibaba-cloud" scheme="http://example.com/tags/alibaba-cloud/"/>
+    
+    <category term="nacos" scheme="http://example.com/tags/nacos/"/>
+    
+    <category term="feign" scheme="http://example.com/tags/feign/"/>
+    
+    <category term="restTemplate" scheme="http://example.com/tags/restTemplate/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring statemachine简介</title>
