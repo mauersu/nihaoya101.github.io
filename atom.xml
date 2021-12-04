@@ -37,9 +37,9 @@
     
     <category term="quickstart" scheme="http://example.com/categories/quickstart/"/>
     
-    <category term="oauth2" scheme="http://example.com/categories/oauth2/"/>
-    
     <category term="alibaba-cloud" scheme="http://example.com/categories/alibaba-cloud/"/>
+    
+    <category term="oauth2" scheme="http://example.com/categories/oauth2/"/>
     
     
     <category term="alibaba-cloud" scheme="http://example.com/tags/alibaba-cloud/"/>
