@@ -17,9 +17,9 @@
           
           <category> quickstart </category>
           
-          <category> alibaba-cloud </category>
-          
           <category> oauth2 </category>
+          
+          <category> alibaba-cloud </category>
           
       </categories>
       
